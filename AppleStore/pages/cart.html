@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Корзина - Интернет магазин</title>
+</head>
+<body>
+    <header class="bg-white">
+        <div class="container-lg">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <ul class="navbar-nav">
+                        <a class="navbar-brand" href="/">LOGO</a>
+                        <div class="collapse navbar-collapse" id="navbarToggler">
+                            <li class="nav-item dropdown me-3">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="modal" data-bs-target="#cityModal">
+                                    Выберите город
+                                </a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link" href="/pages/stores.html">Магазины</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/pages/shipping.html">Оплата и доставка</a>
+                            </li>
+                        </div>
+                    </ul>
+                    <div class="d-flex">
+                        <a href="/pages/favorites.html" class="nav-button position-relative">
+                            <i class="bi bi-suit-heart fs-4"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                              2
+                            </span>
+                        </a>
+                        <a href="/pages/cart.html" type="button" class="nav-button ms-4 position-relative">
+                            <i class="bi bi-cart3 fs-4"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                              1
+                            </span>
+                        </a>
+                        <button class="navbar-toggler ms-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="modal" data-bs-target="#cityModal">
+                                Выберите город
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Каталог</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Услуги</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/stores.html">Магазины</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/shipping.html">Оплата и доставка</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </header>
+    <main>
+        <div class="cart mt-5 pb-5">
+            <div class="container-lg">
+                <article>
+                    <div class="d-flex">
+                        <h4 class="cart__title text-section me-5">Корзина</h4>
+                    </div>
+                </article>
+            </div>
+            <section class="cart__body">
+                <div class="container-lg">
+                    <div class="d-flex flex-column align-items-center">
+                        <img class="cart__body_image" src="../img/shopping-cart.png" alt="Корзина">
+                        <h4 class="fw-semibold mt-3">Корзина пуста</h4>
+                        <h5 class="text-secondary">Но это никогда не поздно исправить :)</h5>
+                        <a href="#" class="btn btn-dark btn-lg mt-4">Каталог товаров</a>
+                    </div>
+                </div>
+                <div class="popular mt-5 bg-white">
+                    <hr>
+                    <div class="container-lg">
+                        <section class="splide bg-white" aria-label="Splide Basic HTML Example">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <a href="#" class="card-link">
+                                            <div class="card product__card product__card_popular p-3 ">
+                                                <div class="product__card_image">
+                                                    <img src="../img/products/iphone/iphone13_pro_max_grey.png" class="card-img-top" alt="iPhone 13 Pro Max 128 ГБ, графитовый">
+                                                </div>
+                                                <div class="product__card__body card-body">
+                                                    <h6 class="product__title fw-semibold ">iPhone 13 Pro Max 128 ГБ, графитовый</h6>
+                                                    <h5 class="product__price fw-bold ">131 990 ₽</h5>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <a href="#" class="card-link">
+                                            <div class="card product__card product__card_popular p-3 ">
+                                                <div class="product__card_image">
+                                                    <img src="../img/products/headphones/airpods3.png" class="card-img-top" alt="Apple AirPods 3 2021">
+                                                </div>
+                                                <div class="product__card__body card-body">
+                                                    <h6 class="product__title fw-semibold ">Apple AirPods 3 2021</h6>
+                                                    <h5 class="product__price fw-bold">20 990 ₽</h5>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <a href="#" class="card-link">
+                                            <div class="card product__card product__card_popular p-3 ">
+                                                <div class="product__card_image">
+                                                    <img src="../img/products/iphone/iphone11_purple.png" class="card-img-top" alt="Apple iPhone 11 128 ГБ, фиолетовый">
+                                                </div>
+                                                <div class="product__card__body card-body">
+                                                    <h6 class="product__title fw-semibold ">Apple iPhone 11 128 ГБ, фиолетовый</h6>
+                                                    <h5 class="product__price fw-bold ">54 500 ₽</h5>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <a href="#" class="card-link">
+                                            <div class="card product__card product__card_popular p-3 ">
+                                                <div class="product__card_image">
+                                                    <img src="../img/products/iphone/iphone_12_black.png" class="card-img-top" alt="Apple iPhone 12 128 ГБ, черный">
+                                                </div>
+                                                <div class="product__card__body card-body">
+                                                    <h6 class="product__title fw-semibold ">Apple iPhone 12 128 ГБ, черный</h6>
+                                                    <h5 class="product__price fw-bold ">83 990 ₽</h5>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <a href="#" class="card-link">
+                                            <div class="card product__card product__card_popular p-3 ">
+                                                <div class="product__card_image">
+                                                    <img src="../img/products/headphones/airpods_pro.png" class="card-img-top" alt="Apple AirPods Pro MagSafe">
+                                                </div>
+                                                <div class="product__card__body card-body">
+                                                    <h6 class="product__title fw-semibold ">Apple AirPods Pro MagSafe</h6>
+                                                    <h5 class="product__price fw-bold ">25 990 ₽</h5>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <a href="#" class="card-link">
+                                            <div class="card product__card product__card_popular p-3 ">
+                                                <div class="product__card_image">
+                                                    <img src="../img/products/apple_watch/watch_se_grey.png" class="card-img-top" alt="Apple Watch Series SE, 44 mm, серый космос">
+                                                </div>
+                                                <div class="product__card__body card-body">
+                                                    <h6 class="product__title fw-semibold ">Apple Watch Series SE, 44 mm, серый космос</h6>
+                                                    <h5 class="product__price fw-bold ">31 990 ₽</h5>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                    <hr>
+                </div>
+            </section> 
+        </div>
+    </main>
+    <!-- Модальное окно выбора города -->
+    <div class="modal fade" id="cityModal" tabindex="-1" aria-labelledby="cityModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cityModalLabel">Выберите ваш город</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body px-5">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-5">
+                        <div class="col">
+                            <div class="d-flex city__list">
+                                <div class="h5 text-primary">A</div>
+                                <ul>
+                                    <li><a href="#"> Альметьевск </a></li>
+                                    <li><a href="#"> Астрахань </a></li>
+                                </ul>
+                            </div>
+                            <div class="d-flex city__list">
+                                <div class="h5 text-primary">Б</div>
+                                <ul>
+                                    <li><a href="#"> Белгород </a></li>
+                                </ul>
+                            </div>
+                            <div class="d-flex city__list">
+                                <div class="h5 text-primary">В</div>
+                                <ul>
+                                    <li><a href="#"> Владикавказ </a></li>
+                                    <li><a href="#"> Волгоград </a></li>
+                                    <li><a href="#"> Воронеж </a></li>
+                                </ul>
+                            </div>
+                            <div class="d-flex city__list">
+                                <div class="h5 text-primary">И</div>
+                                <ul>
+                                    <li><a href="#"> Ижевск </a></li>
+                                    <li><a href="#"> Иркутск </a></li>
+                                </ul>
+                            </div>
+                            <div class="d-flex city__list">
+                                <div class="h5 text-primary">К</div>
+                                <ul>
+                                    <li><a href="#"> Казань </a></li>
+                                    <li><a href="#"> Краснодар </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex city__list">
+                                <div class="h5 text-primary">М</div>
+                                <ul>
+                                    <li><a href=""> Москва </a></li>
+                                </ul>
+                            </div>
+                            <div class="d-flex city__list">
+                                <div class="h5 text-primary">Н</div>
+                                <ul>
+                                    <li><a href="#"> Набережные Челны </a></li>
+                                    <li><a href="#"> Нижнекамск </a></li>
+                                </ul>
+                            </div>
+                            <div class="d-flex city__list">
+                                <div class="h5 text-primary">П</div>
+                                <ul>
+                                    <li><a href="#"> Перьм </a></li>
+                                </ul>
+                            </div>
+                            <div class="d-flex city__list">
+                                <div class="h5 text-primary">С</div>
+                                <ul>
+                                    <li><a href="#"> Санкт-Петербург </a></li>
+                                    <li><a href="#"> Саратов </a></li>
+                                    <li><a href="#"> Сочи </a></li>
+                                </ul>
+                            </div>
+                            <div class="d-flex city__list">
+                                <div class="h5 text-primary">Т</div>
+                                <ul>
+                                    <li><a href=""> Тольятти </a></li>
+                                    <li><a href=""> Тюмень </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex city__list">
+                                <div class="h5 text-primary">У</div>
+                                <ul>
+                                    <li><a href=""> Ульяновск </a></li>
+                                    <li><a href=""> Уфа </a></li>
+                                </ul>
+                            </div>
+                            <div class="d-flex city__list">
+                                <div class="h5 text-primary">Ч</div>
+                                <ul>
+                                    <li><a href=""> Чебоксары </a></li>
+                                    <li><a href=""> Челябинск </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <hr>
+        <div class="container-lg mt-5">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+                <div class="col">
+                    <div class="footer__logo"><a class="navbar-brand" href="/">LOGO</a></div>
+                    <div class="footer__social">
+                        <a href="#" class="me-3"><img src="../../img/logos/VK.png" alt="VK"></a>
+                        <a href="#" class="me-3"><img src="../../img/logos/Instagram.png" alt="Instagram"></a>
+                        <a href="#" class="me-3"><img src="../../img/logos/Telegram.png" alt="Telegram"></a>
+                        <a href="#" class="me-3"><img src="../../img/logos/Whatsapp.png" alt="Whatsapp"></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="footer__about">
+                        <ul class="footer__about_list">
+                            <li class="fw-semibold text-secondary mb-2">О компании</li>
+                            <li><a href="/pages/stores.html" class="footer__link">Адреса магазинов</a></li>
+                            <li><a href="#" class="footer__link">Акции и новости</a></li>
+                            <li><a href="#" class="footer__link">Услуги</a></li>
+                            <li><a href="#" class="footer__link">Контакты</a></li>
+                            <li><a href="#" class="footer__link">Обратная связь</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="footer__help">
+                        <ul class="footer__help_list">
+                            <li class="fw-semibold text-secondary mb-2">Помощь</li>
+                            <li><a href="/pages/shipping.html" class="footer__link">Оплата и доставка</a></li>
+                            <li><a href="#" class="footer__link">Обмен и возврат</a></li>
+                            <li><a href="#" class="footer__link">Гарантии</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="footer__catalog">
+                        <ul class="footer__catalog_list">
+                            <li class="fw-semibold text-secondary mb-2">Каталог</li>
+                            <li><a href="#" class="footer__link">iPhone</a></li>
+                            <li><a href="#" class="footer__link">Аксессуары</a></li>
+                            <li><a href="#" class="footer__link">Наушники</a></li>
+                            <li><a href="#" class="footer__link">Apple Watch</a></li>
+                            <li><a href="#" class="footer__link">Mac</a></li>
+                            <li><a href="#" class="footer__link">iPad</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script>
+    var splide = new Splide( '.splide', {
+        type   : 'loop',
+        perPage: 3,
+        focus  : 'center',
+        padding: { left: 15, right: 15 },
+        gap: '20px',
+        autoHeight: true,
+        pagination: boolean = false,
+        breakpoints: {
+            700: {
+                perPage: 1,
+            },
+        }
+      } );
+
+      splide.mount();
+</script>
+</html>
