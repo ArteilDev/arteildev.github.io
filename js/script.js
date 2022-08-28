@@ -2,6 +2,17 @@
 
 const allLang = ['ru', 'en'];
 
+//----------------------Меню-----------------------
+document.addEventListener('DOMContentLoaded', function(){
+	let navMenu = document.getElementById('navMenu')
+    let navbar = document.getElementById('navbar-respons')
+    
+    navMenu.onclick = function () {
+        navbar.style.display == 'none' ? navbar.style.display = 'grid' : navbar.style.display = 'none'
+    }
+});
+//-------------------------------------------------
+
 //-------------Скролл к разделу--------------------
 $(function(){
 	jQuery.fn.autoscroll = function(selector) {
@@ -44,6 +55,16 @@ window.addEventListener('scroll', () => {
             });
         
             document.querySelectorAll('.navbar li')[i].querySelector('a').classList.add('active');
+        }
+
+		if (el.offsetTop - document.querySelector('.navbar-respons').clientHeight <= scrollDistance+250) {
+            document.querySelectorAll('.navbar-respons a').forEach((el) => {
+                if (el.classList.contains('active')) {
+                    el.classList.remove('active');
+                }
+            });
+        
+            document.querySelectorAll('.navbar-respons li')[i].querySelector('a').classList.add('active');
         }
     });
 });
