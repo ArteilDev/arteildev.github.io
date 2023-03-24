@@ -1,0 +1,60 @@
+.btn
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: nowrap
+    gap: 1rem
+    padding: 1rem 2.5rem
+    max-width: 100px
+    font-family: 'Inter', sans-serif
+    font-size: 16px
+    color: $color-white
+    border: none
+    border-radius: 4px
+    background-color: $color-primary
+
+.scroll
+    display: flex
+    justify-content: center
+    margin-top: 8vh
+    overflow: hidden
+    cursor: pointer
+    &__text
+        margin-left: -4.5rem
+        margin-top: -2rem
+        font-size: 14px
+        transform: rotate(90deg)
+    &__image
+        animation: scroll 3s infinite
+
+.typewriter
+    --caret: currentcolor
+
+.typewriter::before
+    content: "Marat"
+    animation: typing 3s
+
+.typewriter::after
+    content: ""
+    border-right: 2px solid var(--caret)
+    animation: blink 0.5s linear infinite
+
+.purple-dot
+    width: 6px
+    height: 6px
+    margin-right: 10px
+    margin-left: 10px
+    border-radius: 1000px
+    background-color: $color-primary
+
+.follow-cursor
+    display: block
+    width: 6px
+    height: 6px
+    background-color: $color-orange
+    border-radius: 1000px
+    transform: translateY(200%) translateX(300%)
+    position: absolute
+    z-index: 15
+    pointer-events: none
+    transition: width 0.64s, height 0.64s, border-radius 0.64s, background 0.64s

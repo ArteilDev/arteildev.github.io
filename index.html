@@ -1,1 +1,129 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"><link href="css/style.min.css" rel="stylesheet"><title>Arteil Dev.</title></head><body><div class="container"><header class="header" id="header"><nav class="nav padding"><a href="/" class="logo">Arteil Dev.</a><ul class="navbar"><li class="navbar__item"><a class="home-button active lng-home">Главная</a></li><li class="navbar__item"><a class="about-button lng-about">Обо мне</a></li><li class="navbar__item"><a class="projects-button lng-projects">Проекты</a></li><li class="navbar__item"><a class="skills-button lng-skills">Навыки</a></li><li class="navbar__item"><a class="contact-button lng-contacts">Контакты</a></li><select><option value="ru" selected="selected">RU</option><option value="en">EN</option></select></ul><ul class="navbar-respons navbar-hidden padding" id="navbar-respons" style="display: none;"><li class="navbar__item"><a class="home-button active lng-home-r">Главная</a></li><li class="navbar__item"><a class="about-button lng-home-r">Обо мне</a></li><li class="navbar__item"><a class="projects-button lng-projects-r">Проекты</a></li><li class="navbar__item"><a class="skills-button lng-skills-r">Навыки</a></li><li class="navbar__item"><a class="contact-button lng-contacts-r">Контакты</a></li><select><option value="ru" selected="selected">RU</option><option value="en">EN</option></select></ul><a href="#" id="navMenu" class="nav__menu">&#9776;</a></nav></header><div class="section homepage"><h1 class="homepage__title title-1 element-anim">Arteil</h1><h2 class="homepage__subtitle title-1 lng-web-developer element-anim">Веб-Разработчик</h2><h5 class="homepage__desc title-5 lng-portfolio element-anim">Это мое портфолио</h5><div class="homepage__buttons"><button class="button button_primary projects-button mr-2 lng-projects-button element-anim">Проекты</button> <button class="button button_secondary contact-button lng-contacts-button element-anim">Контакты</button></div></div><div class="section about padding"><div class="about__image element-anim"><img src="img/avatar.svg" alt="Image"></div><div class="about__content element-anim"><div class="about__title title-1 mb-3 lng-name">Марат Тазеев</div><div class="about__text mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ex obcaecati minima, amet doloribus unde quaerat quisquam optio quis eligendi dicta omnis atque quod expedita sunt excepturi tempore temporibus nostrum animi! Modi ut officiis distinctio sunt magni maxime unde, velit voluptatibus nesciunt, fugit impedit rerum consequatur iure? Voluptas tempora ut autem! Deserunt, fuga. Nesciunt aspernatur, eligendi hic dolor aliquam dolore assumenda provident iste atque impedit deserunt recusandae delectus non eius dicta alias unde eveniet vitae molestiae! Debitis fugit molestias, amet et expedita quo voluptatibus corporis aliquam, similique veniam quisquam repellendus eum eligendi ratione exercitationem! Modi ratione voluptate iusto eius labore.</div><a href="mailto:arteildev@gmail.com" class="about__email">arteildev@gmail.com</a></div></div><div class="section projects padding"><h3 class="projects__title title-3 mb-6 lng-last-projects element-anim">Последние проекты</h3><div class="projects__list mb-6"><a href="https://arteildev.github.io/Aperture/index.html" class="projects__item element-anim"><img src="img/aperture-project.png" alt="Aperture Project"> </a><a href="https://arteildev.github.io/" class="projects__item element-anim"><img src="img/arteildev-project.png" alt="ArteilDev Project"> </a><a href="https://arteildev.github.io/Baloons/index.html" class="projects__item element-anim"><img src="img/baloons-project.png" alt="Baloons Project"> </a><a class="projects__item element-anim"><h4 class="title-4">Work in Progress <span class="loading">.</span></h4></a></div><div class="projects__button element-anim"><button class="button button_primary lng-view-all">Подробнее</button></div></div><div class="section skills padding"><h3 class="skills__title title-3 mb-6 lng-skills-title">Навыки</h3><div class="skills__list"><div class="skills__item element-anim"><img class="skills__item_img" src="img/icons/html.png" alt="HTML"><h2 class="title-2">HTML</h2></div><div class="skills__item element-anim"><img class="skills__item_img" src="img/icons/css.png" alt="CSS"><h2 class="title-2">CSS</h2></div><div class="skills__item element-anim"><img class="skills__item_img" src="img/icons/sass.png" alt="SASS"><h2 class="title-2">SASS</h2></div><div class="skills__item element-anim"><img class="skills__item_img" src="img/icons/js.png" alt="JavaScript"><h2 class="title-2">JavaScript</h2></div><div class="skills__item element-anim"><img class="skills__item_img" src="img/icons/figma.png" alt="Figma"><h2 class="title-2">Figma</h2></div><div class="skills__item element-anim"><img class="skills__item_img" src="img/icons/python.png" alt="Python"><h2 class="title-2">Python</h2></div></div></div><div class="section contact padding"><h2 class="contact__title title-1 mb-2 lng-contact-title element-anim">Напиши мне!</h2><p class="contact__subtitle mb-3 lng-contact-subtitle element-anim">Если вас заинтересовали мои работы или у вас есть какие-либо вопросы, не стесняйтесь, пишите мне!</p><div class="contact__form element-anim"><form action=""><label class="mb-1 lng-form-name" for="name">Имя</label> <input class="mb-3" type="text" name="name" id="name" placeholder="Name"> <label class="mb-1" for="email">Email</label> <input class="mb-3" type="email" name="email" id="email" placeholder="Example@gmail.com"> <label class="mb-1 lng-form-message" for="message">Сообщение</label> <textarea class="mb-3" type="text" name="message" id="message" placeholder="Hey..."></textarea> <button class="button button_primary button_send lng-form-button">Отправить</button></form></div></div><footer class="footer padding"><a href="/" class="logo">Arteil Dev.</a><div class="footer__list"><a href="/" class="footer__link accent lng-home-footer">Главная</a> <a href="/" class="footer__link lng-about-footer">Обо мне</a> <a href="/" class="footer__link lng-projects-footer">Проекты</a> <a href="/" class="footer__link lng-skills-footer">Навыки</a> <a href="/" class="footer__link lng-contacts-footer">Контакты</a></div><div class="footer__socials"><div class="footer__socials_title accent mb-1 lng-socials">Социальные сети</div><div class="footer__socials-list"><a href="#" class="footer__icon"><img src="img/icons/vk.png" alt="VK"> </a><a href="#" class="footer__icon"><img src="img/icons/telegram.png" alt="Telegram"> </a><a href="#" class="footer__icon"><img src="img/icons/github.png" alt="GitHub"></a></div></div></footer></div><div class="copyright padding mt-2 mb-2"><p>© 2022 Marat Tazeev</p></div></body><script src="js/jquery-3.6.0.min.js"></script><script src="js/lang.js"></script><script src="js/script.js"></script></html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="/css/icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Arteil Dev</title>
+</head>
+<body>
+    <div class="follow-cursor"></div>
+
+    <nav class="nav padding">
+        <span class="nav__brand home-link">arteildev.</span>
+        <span class="nav__item about-link">About</span>
+        <span class="nav__item projects-link">Projects</span>
+        <span class="nav__item contacts-link">Contacts</span>
+    </nav>
+
+    <header class="header">
+        <p class="header__title">arteildev</p>
+        <div class="header-body container">
+            <div class="header-body__hero">
+                <h1> Hi. My name is&nbsp;<span class="typewriter"></span> <br> I'm front-end and web <br> developer</h1>
+                <button class="btn mt-5">Let's Talk <span class="icon-right"></span></button>
+            </div>
+            <div class="header-body__other">
+                <p>AVAILABLE FOR <br> <a href="" class="link">FREELANCE</a> PROJECTS</p>
+                <p class="mt-4">My local time: <span>3:59 PM</span></p>
+            </div>
+        </div>
+        <div class="header-body__footer">
+            <div class="scroll">
+                <img class="scroll__image" src="/img/scroll.svg" alt="">
+                <span class="scroll__text">SCROLL</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="section about padding">
+        <h2 class="section__title">About me</h2>
+        <div class="about__text">
+            Nice to meet you. :) <br>
+            I'm a 24 yo front-end developer. <br>
+            I design & bring to life unique visually <br>
+            stunning and fully functional websites. <br>
+            My goal is to help you achieve yours.
+        </div>
+
+        <div class="skills container">
+            <h3 class="skills__title">Skills</h3>
+            <div class="skills__text">
+                <p>HTML</p>
+                <div class="purple-dot"></div>
+                <p>CSS</p>
+                <div class="purple-dot"></div>
+                <p>SASS</p>
+                <div class="purple-dot"></div>
+                <p>JavaScript</p>
+                <div class="purple-dot"></div>
+                <p>Vue 3</p>
+                <div class="purple-dot"></div>
+                <p>Python</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section projects">
+        <div class="padding">
+            <h2 class="section__title">Projects</h2>
+        </div>
+        <div class="projects-list container">
+            <div class="projects-list__item">
+                <div class="project-left-side">
+                    <img class="project-image" src="/img/aperture-project.png" alt="Aperture Studio">
+                </div>
+                <div class="project-right-side">
+                    <div class="project-text">
+                        <h1 class="project-text__title">Multi-page site</h1>
+                        <p class="project-text__subtitle">Aperture Studio</p>
+                        <div class="project-text__tags">
+                            <span>HTML</span>
+                            <span>SASS</span>
+                        </div>
+                        <a class="btn project-button">View<span class="icon-right"></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-list__item">
+                <div class="project-left-side">
+                    <div class="project-text project-text_primary">
+                        <h1 class="project-text__title">Landing Page</h1>
+                        <p class="project-text__subtitle">Balloon Tours</p>
+                        <div class="project-text__tags">
+                            <span>HTML</span>
+                            <span>SASS</span>
+                        </div>
+                        <a class="btn project-button">View<span class="icon-right"></span></a>
+                    </div>
+                </div>
+                <div class="project-right-side">
+                    <img class="project-image" src="/img/balloons-project.png" alt="Balloon Tours">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contacts">
+        <h1 class="contacts__title">Let's work together :)</h1>
+        <button class="btn">Get in touch <span class="icon-right"></span></button>
+    </section>
+
+    <section class="section empty">
+    </section>
+
+    <footer class="footer padding">
+        <span class="footer__item">2023 - <a href="#" class="link">Marat Tazeev</a></span>
+        <span class="footer__item icon-outline-up"></span>
+        <span class="footer__item"><a href="#" class="link">Available worldwide</a></span>
+    </footer>
+</body>
+<script src="/js/jquery-3.6.4.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="/js/main.js"></script>
+</html>
