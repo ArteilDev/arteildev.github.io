@@ -1,84 +1,59 @@
-// Слежение объекта за крусором
-document.addEventListener('DOMContentLoaded', () => {
-
-    const followCursor = () => { // объявляем функцию followCursor
-        const el = document.querySelector('.follow-cursor') // ищем элемент, который будет следовать за курсором
-
-        window.addEventListener('mousemove', e => { // при движении курсора
-            const target = e.target // определяем, где находится курсор
-            if (!target) return
-
-            if (target.closest('a')) { // если курсор наведён на ссылку
-                el.classList.add('follow-cursor_active') // элементу добавляем активный класс
-            } else { // иначе
-                el.classList.remove('follow-cursor_active') // удаляем активный класс
-            }
-
-            el.style.left = e.pageX + 'px' // задаём элементу позиционирование слева
-            el.style.top = e.pageY + 'px' // задаём элементу позиционирование сверху
-        })
-    }
-
-    followCursor() // вызываем функцию followCursor
-
-})
-
 //-------------Активный пункт меню-----------------
 window.addEventListener('scroll', () => {
     let scrollDistance = window.scrollY;
     document.querySelectorAll('.section').forEach((el, i) => {
         if (el.offsetTop <= scrollDistance + 1500) {
-            document.querySelectorAll('.nav span').forEach((el) => {
+            document.querySelectorAll('.nav a').forEach((el) => {
                 if (el.classList.contains('active')) {
                     el.classList.remove('active');
                 }
             });
             
-            if(!el.classList.contains('nav__brand')) {
-                document.querySelectorAll('.nav span')[i].classList.add('active');
-            }
+            document.querySelectorAll('.nav a')[i].classList.add('active');
         }
-
-		// if (el.offsetTop <= scrollDistance+250) {
-        //     document.querySelectorAll('.navbar-respons a').forEach((el) => {
-        //         if (el.classList.contains('active')) {
-        //             el.classList.remove('active');
-        //         }
-        //     });
-        
-        //     document.querySelectorAll('.navbar-respons li')[i].querySelector('a').classList.add('active');
-        // }
     });
 });
 //------------------------------------------------
 
-//-------------Скролл к разделу--------------------
-$(function(){
-	jQuery.fn.autoscroll = function(selector) {
-    	$('html, body').animate({
-        	scrollTop: $(this).offset().top -50
-      	}, 500);
-  	}
-    
-    $('.home-link').on('click', function(){
-    	$('.header').autoscroll();
-    });
+// При появлении блока с контактами
+var block_show = null;
+ 
+function contactsSectionTracking(){
 
-    $('.scroll').on('click', function(){
-        console.log('111')
-        $('.about').autoscroll();
-    });
+    if(location.pathname !== '/contacts')
+    {
+        var wt = $(window).scrollTop();
+        var wh = $(window).height();
+        var et = $('.contacts').offset().top;
+        var eh = $('.contacts').outerHeight();
+     
+        if ((wt - 850) + wh >= et && wt + (wh) - eh * 2 <= et + (wh - eh)){
+            if (block_show == null || block_show == false) {
+                document.querySelector('.nav').classList.add('nav_black')
+                document.querySelector('.nav-sm').classList.add('nav-sm_black')
+                document.querySelector('.contacts__title').classList.add('animate')
+                document.querySelector('.btn_contacts').classList.add('animate')
+            }
+            block_show = true;
+        } else {
+            if (block_show == null || block_show == true) {
+                document.querySelector('.nav').classList.remove('nav_black')
+                document.querySelector('.nav-sm').classList.remove('nav-sm_black')
+            }
+            block_show = false;
+        }
+    }
 
-    $('.about-link').on('click', function(){
-        $('.about').autoscroll();
-    });
-
-    $('.projects-link').on('click', function(){
-        $('.projects').autoscroll();
-    });
-
-    $('.contacts-link').on('click', function(){
-        $('.contacts').autoscroll();
-    });
+    if(location.pathname == '/contacts') {
+        document.querySelector('.nav').classList.remove('nav_black')
+        document.querySelector('.nav-sm').classList.remove('nav-sm_black')
+    }
+}
+ 
+$(window).scroll(function(){
+	contactsSectionTracking();
 });
-//-------------------------------------------------
+	
+$(document).ready(function(){ 
+	contactsSectionTracking();
+});
