@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>@arteilzx</title>
+</head>
+<body>
+    <main class="main">
+        <div class="avatar-container" onclick="modalToggle()"></div>
+        <div class="click-text">Click to Avatar</div>
+        <div class="modal">
+            <button class="btn modal-close" onclick="modalToggle()">X</button>
+            <div class="modal-header"></div>
+            <div class="modal-body">
+                <h1 class="modal-body__title">Тазеев Марат</h1>
+                <p class="modal-body__subtitle">Открой по кнопке мой телеграм</p>
+                <a class="btn modal-body__button" href="https://t.me/arteilzx" target="_blank" >Открыть</a>
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+    function modalToggle() {
+        const modal = document.querySelector('.modal')
+        modal.classList.toggle('active')
+    }
+</script>
+</html>
