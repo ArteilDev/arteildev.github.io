@@ -1,0 +1,181 @@
+.btn
+    padding: 8px 44px
+    font-size: 20px
+    border: none
+    border-radius: 4px
+    transition: $trans
+    cursor: pointer
+    &_primary
+        color: $color-white
+        background-color: $color-primary
+        &:hover
+            background-color: #48926a
+    &_large
+        padding: 8px 88px
+
+.radio
+    display: inline-flex
+    cursor: pointer
+    input
+        vertical-align: middle
+        width: 16px
+        height: 16px
+        border-radius: 10px
+        background: none
+        border: 0
+        box-shadow: inset 0 0 0 1px $color-secondary
+        box-shadow: inset 0 0 0 1.5px $color-secondary
+        appearance: none
+        padding: 0
+        margin: 0
+        transition: box-shadow 150ms cubic-bezier(.95,.15,.5,1.25)
+        pointer-events: none
+        &:focus
+            outline: none
+        &:checked
+            box-shadow: inset 0 0 0 4px $color-primary
+    span
+        vertical-align: middle
+        display: inline-block
+        line-height: 20px
+        padding: 0 8px
+
+.badge
+    position: absolute
+    top: -5px
+    right: -8px
+    display: flex
+    justify-content: center
+    align-items: center
+    font-family: 'Roboto', sans-serif
+    font-size: 10px
+    color: $color-white
+    font-weight: 500
+    width: 16px
+    height: 16px
+    background-color: $color-primary
+    border-radius: 500px
+    box-sizing: border-box
+    &_large
+        font-size: 16px
+        width: 22px
+        height: 22px
+
+.link-steps
+    display: flex
+    gap: 10px
+    font-family: 'Roboto', sans-serif
+    font-weight: 500
+    &__item
+        color: $color-secondary
+        &_current
+            color: $color-black
+        &:hover
+            text-decoration: underline
+
+.input
+    padding: 10px 20px
+    width: 100%
+    border: 1px solid $color-border
+    box-sizing: border-box
+
+.custom-checkbox
+    position: absolute
+    z-index: -1
+    opacity: 0
+
+.custom-checkbox+label 
+    display: inline-flex
+    align-items: center
+    user-select: none
+
+.custom-checkbox+label::before 
+    content: ''
+    display: inline-block
+    width: 1em
+    height: 1em
+    flex-shrink: 0
+    flex-grow: 0
+    border: 1px solid $color-border
+    border-radius: 0.25em
+    margin-right: 0.5em
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: 50% 50%
+
+.custom-checkbox:not(:disabled):not(:checked)+label:hover::before
+    border-color: $color-border
+
+.custom-checkbox:not(:disabled):active+label::before 
+    background-color: #b0f1cd
+    border-color: #b0f1cd
+
+.custom-checkbox:focus+label::before
+    box-shadow: 0 0 0 0.2rem rgba(86, 178, 127, 0.2)
+
+.custom-checkbox:focus:not(:checked)+label::before 
+    border-color: #b0f1cd
+
+.custom-checkbox:checked+label::before
+    border-color: $color-primary
+    background-color: $color-primary
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e")
+
+.custom-checkbox:disabled+label::before
+    background-color: #b0f1cd
+
+input[type="number"]
+    -webkit-appearance: textfield
+    -moz-appearance: textfield
+    appearance: textfield
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+    -webkit-appearance: none
+
+.number-input
+    margin: 0 auto
+    display: inline-flex
+    width: 75px
+    height: 30px
+    border: 1px solid $color-primary
+
+
+.number-input,
+.number-input *
+    box-sizing: border-box
+
+.number-input button
+    outline:none
+    -webkit-appearance: none
+    background-color: transparent
+    border: none
+    align-items: center
+    justify-content: center
+    width: 30px
+    cursor: pointer
+    margin: 0
+    position: relative
+
+.number-input button:after
+    display: inline-block
+    position: absolute
+    font-family: 'Poppins', sans-serif
+    content: '-'
+    font-size: 18px
+    transform: translate(-50%, -50%)
+
+.number-input button.plus:after
+    content: '+'
+    color: $color-primary
+    transform: translate(-50%, -50%)
+
+.number-input input[type=number]
+    padding: 6px 0px
+    width: 30px
+    font-family: 'Roboto', sans-serif
+    font-size: 16px
+    border: none
+    text-align: center
+    &:focus
+        outline: none
