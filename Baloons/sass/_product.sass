@@ -1,0 +1,60 @@
+.product
+    padding-top: 120px
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 32px
+    @include respond (tab-port)
+        grid-template-columns: 1fr
+    &__img
+        width: 100%
+        background-color: #F7F8FA
+    &__subtitle
+        font-size: 22px
+        font-weight: 500
+        text-align: center
+    &__shipping
+        margin-top: 24px
+        text-align: center
+    &__title
+        font-size: 26px
+        font-weight: 500
+        line-height: 57.6px
+    &__price
+        font-size: 26px
+        font-weight: 500
+        line-height: 57.6px
+    &-one-purchase
+        margin-left: 20px
+        margin-bottom: 15px
+    &-subscribe
+        padding: 20px
+        border: 1px solid #E6E6E6
+        border-radius: 7px
+        &__subtitle
+            margin-top: 10px
+            color: $color-secondary
+    &__description
+        padding: 22px
+        line-height: 25.6px
+        border: 1px solid #E6E6E6
+        border-radius: 7px
+    &-col
+        &_left
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 16px
+        &_right
+            display: flex
+            flex-direction: column
+            gap: 16px
+    &-info
+        display: grid
+        grid-template-columns: 150px 1fr
+        align-items: baseline
+    &-other
+        @include respond (tab-land)
+            grid-column: 1 / -1 
+
+#addCart
+    width: 100%
