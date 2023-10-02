@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/icons.css">
+    <title>KANGOO - Студия интенсивных тренировок</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <img src="/img/logo.png" alt="KANGOO Club Fitness" class="nav-brand">
+                <div class="navbar-nav navbar-nav_wide">
+                    <div class="navbar-nav_main">
+                        <a href="#" class="navbar-nav__item">Направления</a>
+                        <a href="#" class="navbar-nav__item">Тренеры</a>
+                        <a href="#" class="navbar-nav__item">Прайс</a>
+                    </div>
+                    <div class="navbar-nav-users">
+                        <img src="/img/users.svg" alt="Users" class="navbar-nav-users__item">
+                        <img src="/img/users.svg" alt="Users" class="navbar-nav-users__item">
+                        <img src="/img/users.svg" alt="Users" class="navbar-nav-users__item">
+                        <img src="/img/users.svg" alt="Users" class="navbar-nav-users__item">
+                    </div>
+                    <a href="#" class="btn">Расписание</a>
+                </div>
+            </nav>
+            <div class="hero">
+                <div class="hero-info">
+                    <h1 class="hero-info__title">Студия интенсивных тренировок <br><span>KANGOO CLUB</span></h1>
+                    <div class="col-8">
+                        <h2 class="hero-info__subtitle">KANGOO CLUB- это модный функциональный женский фитнес клуб в Казани!</h2>
+                    </div>
+                    <button class="hero__button">Записаться</button>
+                </div>
+                <img src="/img/hero_1.png" class="hero__img hero__img_1" alt="Изображение">
+                <img src="/img/hero_2.png" class="hero__img hero__img_2" alt="Изображение">
+                <div class="hero-gradient"></div>
+                </img>
+            </div>
+        </div>
+        <div class="nav-collapse">
+            <input class="checkbox" type="checkbox" name="navbar-collapse" id="navbarCollapse" />
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <div class="navbar-collapse">
+                <a href="#" class="navbar-collapse__item">Направления</a>
+                <a href="#" class="navbar-collapse__item">Тренеры</a>
+                <a href="#" class="navbar-collapse__item">Прайс</a>
+                <a href="#" class="navbar-collapse__item btn">Расписание</a>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="section price">
+            <h2 class="section-title">Выберите абонемент</h2>
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <div class="slider-card">
+                        <p class="slider-card__title">Beginner</p>
+                        <p class="slider-card__price">1000</p>
+                        <div class="slider-card__options">
+                            <span class="icon-check"></span>
+                            <p>10 групповых <br> занятий</p>
+                        </div>
+                        <div class="slider-card__options">
+                            <span class="icon-check"></span>
+                            <p>3 индвидуальных <br> занятия</p>
+                        </div>
+                        <button class="slider-card__button">Купить</button>
+                    </div>
+                    <div class="slider-card">
+                        <p class="slider-card__title">Intermediate</p>
+                        <p class="slider-card__price">3000</p>
+                        <div class="slider-card__options">
+                            <span class="icon-check"></span>
+                            <p>10 групповых <br> занятий</p>
+                        </div>
+                        <div class="slider-card__options">
+                            <span class="icon-check"></span>
+                            <p>3 индвидуальных <br> занятия</p>
+                        </div>
+                        <button class="slider-card__button">Купить</button>
+                    </div>
+                    <div class="slider-card slider-card_active">
+                        <p class="slider-card__title">Elementary</p>
+                        <p class="slider-card__price">5000</p>
+                        <div class="slider-card__options">
+                            <span class="icon-check"></span>
+                            <p>10 групповых <br> занятий</p>
+                        </div>
+                        <div class="slider-card__options">
+                            <span class="icon-check"></span>
+                            <p>3 индвидуальных <br> занятия</p>
+                        </div>
+                        <button class="slider-card__button">Купить</button>
+                    </div>
+                    <div class="slider-card">
+                        <p class="slider-card__title">Advanced</p>
+                        <p class="slider-card__price">7000</p>
+                        <div class="slider-card__options">
+                            <span class="icon-check"></span>
+                            <p>10 групповых <br> занятий</p>
+                        </div>
+                        <div class="slider-card__options">
+                            <span class="icon-check"></span>
+                            <p>3 индвидуальных <br> занятия</p>
+                        </div>
+                        <button class="slider-card__button">Купить</button>
+                    </div>
+                    <div class="slider-card">
+                        <p class="slider-card__title">Proficiency</p>
+                        <p class="slider-card__price">9000</p>
+                        <div class="slider-card__options">
+                            <span class="icon-check"></span>
+                            <p>10 групповых <br> занятий</p>
+                        </div>
+                        <div class="slider-card__options">
+                            <span class="icon-check"></span>
+                            <p>3 индвидуальных <br> занятия</p>
+                        </div>
+                        <button class="slider-card__button">Купить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section entry">
+            <h2 class="section-title">Запишитесь на занятие</h2>
+            <div class="entry-selectors entry-selectors_wide container">
+                <select name="location" id="location-select">
+                    <option value="" class="select-option">Место</option>
+                </select>
+                <select name="type" id="type-select">
+                    <option value="" class="select-option">Тренировка</option>
+                </select>
+                <select name="trainer" id="trainer-select">
+                    <option value="" class="select-option">Тренера</option>
+                </select>
+            </div>
+            <div class="entry-selectors entry-selectors_sm container">
+                <select name="location" id="location-select">
+                    <option value="" class="select-option">Дата</option>
+                </select>
+                <select name="type" id="type-select">
+                    <option value="" class="select-option">Место</option>
+                </select>
+            </div>
+            <div class="timetable-wrapper">
+                <div class="container">
+                    <div class="timetable timetable_wide">
+                        <div class="timetable-col">
+                            <p class="timetable-title">ПН <span>31.07</span></p>
+
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #F0CFFF">
+                                <div class="timetable-item__image">
+                                    <img src="/img/hit_functional.svg" alt="HIT FUNCTIONAL">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="time">9:00 - 10:00</span>
+                                    <span class="type">HIT FUNCTIONAL</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                            </div>
+
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #FEE7FF;">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/fitbox.svg" alt="FITBOX">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="time">12:00 - 13:00</span>
+                                    <span class="type">FITBOX</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                            </div>
+                            <div class="timetable-item timetable-item_empty">
+                            </div>
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #FEE7FF;">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/fitbox.svg" alt="FITBOX">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="time">18:00 - 19:00</span>
+                                    <span class="type">FITBOX</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="timetable-col">
+                            <p class="timetable-title">ВТ <span>01.08</span></p>
+
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #F0CFFF">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/hit_functional.svg" alt="HIT FUNCTIONAL">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="time">9:00 - 10:00</span>
+                                    <span class="type">HIT FUNCTIONAL</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                            </div>
+
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #FEE7FF;">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/fitbox.svg" alt="FITBOX">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="time">12:00 - 13:00</span>
+                                    <span class="type">FITBOX</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                            </div>
+
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #F0CFFF;">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/freestyler.svg" alt="FREESTYLER">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="time">17:00 - 18:00</span>
+                                    <span class="type">FREESTYLER</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                            </div>
+
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #FEE7FF;">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/fitbox.svg" alt="FITBOX">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="time">18:00 - 19:00</span>
+                                    <span class="type">FITBOX</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                            </div>
+
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #F0CFFF;">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/freestyler.svg" alt="FREESTYLER">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="time">19:00 - 20:00</span>
+                                    <span class="type">FREESTYLER</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="timetable-col">
+                            <p class="timetable-title">СР <span>02.08</span></p>
+
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #F0CFFF">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/hit_functional.svg" alt="HIT FUNCTIONAL">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="time">9:00 - 10:00</span>
+                                    <span class="type">HIT FUNCTIONAL</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                            </div>
+
+                            <div class="timetable-item timetable-item_empty">
+                            </div>
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #F0CFFF;">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/freestyler.svg" alt="FREESTYLER">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="time">19:00 - 20:00</span>
+                                    <span class="type">FREESTYLER</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                            </div>
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #FEE7FF;">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/fitbox.svg" alt="FITBOX">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="time">18:00 - 19:00</span>
+                                    <span class="type">FITBOX</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                            </div>
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #F0CFFF;">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/freestyler.svg" alt="FREESTYLER">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="time">19:00 - 20:00</span>
+                                    <span class="type">FREESTYLER</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timetable-col">
+                            <p class="timetable-title">ЧТ <span>03.08</span></p>
+
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #F0CFFF">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/hit_functional.svg" alt="HIT FUNCTIONAL">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="time">9:00 - 10:00</span>
+                                    <span class="type">HIT FUNCTIONAL</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                            </div>
+
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #FEE7FF;">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/fitbox.svg" alt="FITBOX">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="time">12:00 - 13:00</span>
+                                    <span class="type">FITBOX</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                            </div>
+
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #F0CFFF;">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/freestyler.svg" alt="FREESTYLER">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="time">19:00 - 20:00</span>
+                                    <span class="type">FREESTYLER</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                            </div>
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #FEE7FF;">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/fitbox.svg" alt="FITBOX">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="time">18:00 - 19:00</span>
+                                    <span class="type">FITBOX</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timetable-col">
+                            <p class="timetable-title">ПТ <span>04.08</span></p>
+
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #F0CFFF">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/hit_functional.svg" alt="HIT FUNCTIONAL">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="time">9:00 - 10:00</span>
+                                    <span class="type">HIT FUNCTIONAL</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                            </div>
+
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #FEE7FF;">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/fitbox.svg" alt="FITBOX">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="time">12:00 - 13:00</span>
+                                    <span class="type">FITBOX</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                            </div>
+
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #F0CFFF;">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/freestyler.svg" alt="FREESTYLER">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="time">19:00 - 20:00</span>
+                                    <span class="type">FREESTYLER</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timetable-col">
+                            <p class="timetable-title">СБ <span>05.08</span></p>
+
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #F0CFFF">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/hit_functional.svg" alt="HIT FUNCTIONAL">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="time">9:00 - 10:00</span>
+                                    <span class="type">HIT FUNCTIONAL</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                            </div>
+
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #FEE7FF;">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/fitbox.svg" alt="FITBOX">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="time">12:00 - 13:00</span>
+                                    <span class="type">FITBOX</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timetable-col">
+                            <p class="timetable-title">ВС <span>06.08</span></p>
+
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #F0CFFF">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/hit_functional.svg" alt="HIT FUNCTIONAL">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="time">9:00 - 10:00</span>
+                                    <span class="type">HIT FUNCTIONAL</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timetable timetable_sm">
+                        <div class="timetable-col">
+                            <p class="timetable-title">Среда, <span>02.08</span></p>
+
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #F0CFFF">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/hit_functional.svg" alt="HIT FUNCTIONAL">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="type">HIT FUNCTIONAL</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                                <span class="time">9:00</span>
+                            </div>
+
+                            <div class="timetable-item timetable-item_empty">
+                            </div>
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #F0CFFF;">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/freestyler.svg" alt="FREESTYLER">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="type">FREESTYLER</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                                <span class="time">17:00</span>
+                            </div>
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #FEE7FF;">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/fitbox.svg" alt="FITBOX">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="type">FITBOX</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                                <span class="time">18:00</span>
+                            </div>
+                            <div class="timetable-item" onclick="modalController(event)"  style="background-color: #F0CFFF;">
+                                <div class="timetable-item__image" >
+                                    <img src="/img/freestyler.svg" alt="FREESTYLER">
+                                </div>
+                                <div class="timetable-item__info">
+                                    <span class="type">FREESTYLER</span>
+                                    <span class="location">Сафиуллина 2</span>
+                                    <span class="trainer">Анна М.</span>
+                                    <span class="slots">20 мест</span>
+                                </div>
+                                <span class="time">19:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section howfind">
+            <div class="howfind-gradient-1"></div>
+            <h2 class="section-title">Как нас найти</h2>
+            <div class="yandex-map">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0e1bb6a148f704c65159a4ebfae504ff6dc930dfc6819d7c12c6e9d2e87fda4a&amp;source=constructor" width="100%" height="500" frameborder="0"></iframe>
+            </div>
+            <div class="howfind-gradient-2"></div>
+        </div>
+
+        <div class="modal-wrapper">
+            <div class="modal">
+                <div class="modal-left">
+                    <p class="modal-left__title">Запись на занятие</p>
+                    <p class="modal-left__type">FITBOX</p>
+                    <div class="row modal-left__time">
+                        <p>03.08 в 12:00</p>
+                        <p>Тренер - <span>Анна Маркелова</span></p>
+                    </div>
+                    <input type="text" class="modal-input" placeholder="Ваше Имя">
+                    <input type="email" class="modal-input" placeholder="Email">
+                    <input type="text" class="modal-input" placeholder="Телефон">
+                    <p>осталось 20 мест</p>
+                    <button class="modal__button">Записаться</button>
+                </div>
+                <div class="modal-right">
+                    <div class="tabs">
+                        <input class="tabs-input" name="tabs" type="radio" id="tab-1" checked="checked"/>
+                        <label class="tabs-label" for="tab-1">О тренировке</label>
+                        <div class="tabs-panel">
+                            <p>Регулярная практика работы с телом, дыханием и вниманием высвобождает блоки из подсознания человека, помогая отпустить травмы прошлого, беспокойство о будущем и соединишься с радостью настоящего. За счет техник по гармонизации работы эндокринной системы, кундалини йога высоко эффективна в работе с восстановлением от наркотических, пищевых, алкогольных зависимостей. Через движение, дыхание, техники медитации кундалини-йога укрепляет нервную, иммунную, эндокринную системы, улучшает кровообращение внутренних органов, циркуляцию лимфатической жидкости, служит профилактикой и не медицинским способом восстановления от стресса. Кундалини йога позволяет практикующему получить яркие результаты от развития всех уровней жизни: Физического, эмоционального, социального, ментального, духовного Это интегральный подход к качеству жизни в целом</p>
+                        </div>
+                        <input class="tabs-input" name="tabs" type="radio" id="tab-2"/>
+                        <label class="tabs-label" for="tab-2">О тренере</label>
+                        <div class="tabs-panel tabs-panel-trainer">
+                            <div class="tabs-panel-trainer__info">
+                                <img src="/img/user_big.svg" alt="Тренер">
+                                <div class="col">
+                                    <div class="d-flex">
+                                        <span class="icon-check"></span>
+                                        <p><span>23 года</span> тренировочного опыта</p>
+                                    </div>
+                                    <div class="d-flex">
+                                        <span class="icon-check"></span>
+                                        <p><span>7 лет</span> тренерского стажа</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs-panel-trainer__text">
+                                <p><span>Дисциплины:</span> тренер-универсал, применяющий подход умного фитнеса. Ведёт персональные и групповые тренировки по дисциплинам: функциональный тренинг, crossfit, функциональная йога (один из создателей), оздоровительная растяжка и гимнастика;</p>
+                                <p><span>Принципы:</span>не останавливаться в обучении и движении; расширять границы познания и восприятия; всегда быть примером.</p>
+                            </div>
+                        </div>
+                        <input class="tabs-input" name="tabs" type="radio" id="tab-3"/>
+                        <label class="tabs-label" for="tab-3">Видео</label>
+                    </div>
+                </div>
+                <button class="modal-close" onclick="modalController(event)">
+                    <span class="icon-close"></span>
+                </button>
+            </div>
+            <div class="bg-blur"></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-socials">
+                <div class="footer__logo">
+                    <img src="/img/logo_footer.png" alt="KANGOO CLUB">
+                </div>
+                <div class="footer-socials__list">
+                    <a href="#" class="footer-socials__item">
+                        <img src="/img/tg.svg" alt="Телеграм">
+                    </a>
+                    <a href="#" class="footer-socials__item">
+                        <img src="/img/inst.svg" alt="Instagram">
+                    </a>
+                    <a href="#" class="footer-socials__item">
+                        <img src="/img/vk.svg" alt="Вконтакте">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <p class="footer__title">Навигация по сайту</p>
+                <div class="footer-nav-list">
+                    <div class="footer-col">
+                        <a href="#" class="footer__item">Расписание</a>
+                        <a href="#" class="footer__item">Направления</a>
+                        <a href="#" class="footer__item">Тренеры</a>
+                        <a href="#" class="footer__item">Прайс</a>
+                    </div>
+                    <div class="footer-col">
+                        <a href="#" class="footer__item">Подписка</a>
+                        <a href="#" class="footer__item">Аренда</a>
+                        <a href="#" class="footer__item">Вакансии</a>
+                        <a href="#" class="footer__item">Оплата</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-contacts">
+                <p class="footer__title">Контакты</p>
+                <div class="footer-col">
+                    <p class="footer__item">Адрес: город Казань, <br>ул. Сафиуллина дом 3</p>
+                    <p class="footer__item">7 (999) 000-00-00</p>
+                </div>
+            </div>
+            <div class="footer-worktime">
+                <p class="footer__title">Время работы</p>
+                <div class="footer-col">
+                    <p class="footer__item">Пн-Пт: 7:00-21:00<br>Сб-Вс: 7:00-20:00</p>
+                </div>
+            </div>
+            <a href="/" class="footer__toup">В начало</a>
+        </div>
+    </footer>
+</body>
+<script>
+    let modal = document.querySelector('.modal-wrapper')
+
+    function modalController(event) {
+        modal.classList.toggle('active')
+    }
+</script>
+</html>
