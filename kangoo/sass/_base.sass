@@ -331,6 +331,8 @@ button
         font-size: 24px
         font-weight: 600
         color: $color-white
+        @include respond (laptop)
+            font-size: 20px
     &-nav
         @include respond (tab-port)
             display: none
