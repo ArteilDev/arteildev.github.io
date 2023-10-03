@@ -4,6 +4,11 @@
     color: $color-white
     background-color: $color-main
     border-radius: 15px
+    transition: .2s ease
+    &:hover
+        background-color: #E23AD2
+    &:focus
+        background-color: #E565D9
 
 select
     padding: 8px 12px
@@ -77,12 +82,28 @@ option:hover
             color: $color-main
             background-color: $color-white
             border-radius: 50px
-
+            transition: .2s ease
+            &:hover
+                color: $color-white
+                background: none
+                box-shadow: 0px 0px 0px 4px $color-white inset
+            &:focus
+                color: $color-white
+                background-color: #bd86ff
+                box-shadow: 0px 0px 0px 4px $color-white inset
         &_active
             transform: scale(1.1)
             background-color: $color-primary
             & .slider-card__button
                 color: $color-primary
+                &:hover
+                    color: $color-white
+                    background: none
+                    box-shadow: 0px 0px 0px 4px $color-white inset
+                &:focus
+                    color: $color-white
+                    background-color: #E565D9
+                    box-shadow: 0px 0px 0px 4px $color-white inset
 
 
 .modal-wrapper
@@ -126,6 +147,8 @@ option:hover
         background: none
         z-index: 20
         cursor: pointer
+        @include respond (phone-port)
+            color: $color-primary
     &-left
         padding: 40px 96px
         display: flex
