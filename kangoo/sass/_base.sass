@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap')
 
+@font-face
+    font-family: 'Bliss Pro'
+    font-weight: 900
+    font-style: normal
+    src: url('fonts/BlissPro-Heavy.woff') format('woff')
+
 *
     padding: 0
     margin: 0
@@ -38,7 +44,7 @@ button
     @include respond (phone-port)
         grid-template-columns: 1fr
     &-info
-        margin-top: 48px
+        margin-top: 96px
         @include respond (phone-port)
         &__title
             font-weight: 700
@@ -49,6 +55,7 @@ button
             @include respond (phone-sm)
                 font-size: 24px
             & span
+                font-family: 'Bliss Pro', sans-serif
                 font-size: 72px
                 line-height: 100%
                 color: $color-title
@@ -146,7 +153,7 @@ button
     display: grid
     grid-template-columns: repeat(7, 1fr)
     justify-content: space-between
-    grid-column-gap: 8px
+    grid-column-gap: 24px
     color: $color-white
     @include respond (laptop)
         grid-template-columns: repeat(4, 1fr)
@@ -197,6 +204,7 @@ button
                 font-size: 16px
                 white-space: nowrap
             & .type
+                font-family: 'Bliss Pro', sans-serif
                 font-size: 14px
                 font-weight: 600
             & .location
@@ -248,7 +256,7 @@ button
             top: -250px
             right: 0
             width: 100%
-            height: 50vh
+            height: 100%
             background: radial-gradient(74.74% 47.49% at 5.94% 50%, rgba(172, 105, 255, 0.40) 7.29%, rgba(255, 0, 226, 0.15) 41.15%, rgba(255, 254, 255, 0.00) 100%)
             transform: rotate(180deg)
             z-index: -1
@@ -257,7 +265,7 @@ button
             bottom: -50%
             right: 0
             width: 100%
-            height: 50vh
+            height: 100%
             background: radial-gradient(74.74% 47.49% at 5.94% 50%, rgba(172, 105, 255, 0.40) 7.29%, rgba(255, 0, 226, 0.15) 41.15%, rgba(255, 254, 255, 0.00) 100%)
             z-index: -1
 
