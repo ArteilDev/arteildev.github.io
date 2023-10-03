@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap')
 
 @font-face
     font-family: 'Bliss Pro'
@@ -47,7 +47,7 @@ button
         margin-top: 96px
         @include respond (phone-port)
         &__title
-            font-weight: 700
+            font-weight: 400
             font-size: 48px
             line-height: 100%
             @include respond (laptop)
@@ -169,7 +169,7 @@ button
         grid-template-columns: 1fr
     &-title
         font-size: 40px
-        font-weight: 600
+        font-weight: 400
         text-align: center
         & span
             font-size: 30px
@@ -199,12 +199,14 @@ button
             color: $color-white
             background-color: #E23AD2 !important
             box-shadow: 0px 0px 0px 5px #CD00B9 inset
+            & .timetable-item__image svg path
+                fill: $color-white
         &:not(.timetable-item_empty):focus
             color: $color-white
             background-color: #E565D9 !important
             box-shadow: 0px 0px 0px 5px #E23AD2 inset
         &__image
-            width: 100%
+            min-width: 38px
             text-align: center
         &__info
             display: flex
@@ -216,7 +218,7 @@ button
             & .type
                 font-family: 'Bliss Pro', sans-serif
                 font-size: 14px
-                font-weight: 600
+                font-weight: 400
             & .location
                 font-size: 12px
             & .trainer
@@ -238,7 +240,7 @@ button
             & .type
                 margin-bottom: 8px
                 font-size: 16px
-                font-weight: 600
+                font-weight: 400
             & .location
                 font-size: 14px
             & .trainer
@@ -252,7 +254,7 @@ button
                 display: flex
                 align-items: center
                 font-size: 38px
-                font-weight: 600
+                font-weight: 400
                 vertical-align: middle
                 height: 100%
                 @include respond (phone-sm)
@@ -329,7 +331,7 @@ button
     &__title
         margin-bottom: 26px
         font-size: 24px
-        font-weight: 600
+        font-weight: 400
         color: $color-white
         @include respond (laptop)
             font-size: 20px
