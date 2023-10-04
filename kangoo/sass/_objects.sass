@@ -13,7 +13,9 @@
 select
     padding: 8px 12px
     width: 100%
+    font-family: 'Roboto Condensed', sans-serif
     font-size: 24px
+    font-weight: 400
     color: $color-white
     background: $color-main
     border-radius: 10px
@@ -31,8 +33,17 @@ option:hover
     background: #F6C4F1
 
 .slider-wrapper
+    position: relative
     height: 450px
     overflow-y: visible 
+
+.slider-gradient
+    position: absolute
+    left: -25%
+    top: -25%
+    width: 150%
+    height: 150%
+    z-index: -1
     background: radial-gradient(61.15% 50% at 49.97% 50%, rgba(172, 105, 255, 0.40) 24.48%, rgba(255, 0, 226, 0.15) 55.21%, rgba(255, 254, 255, 0.00) 100%)
 
 .slider
@@ -168,7 +179,7 @@ option:hover
                 font-size: 18px
         &__type
             font-size: 45px
-            font-weight: 400
+            font-weight: 700
             color: $color-primary
             @include respond (laptop)
                 font-size: 36px
@@ -198,6 +209,7 @@ option:hover
     &__button
         padding: 8px
         font-size: 30px
+        font-weight: 700
         color: $color-white
         width: 100%
         background-color: $color-primary
@@ -253,7 +265,7 @@ option:hover
         display: none
         padding-top: 48px
         font-size: 20px
-        font-weight: 400
+        font-weight: 300
         color: $color-white
         @include respond (laptop)
             font-size: 14px
@@ -266,6 +278,10 @@ option:hover
                 width: 100%
                 @include respond (laptop)
                     align-items: center
+                    gap: 16px
+                & .col
+                    display: flex
+                    flex-direction: column
                     gap: 16px
                 & img
                     @include respond (tab-port)
@@ -288,6 +304,8 @@ option:hover
                 flex-direction: column
                 gap: 16px
                 margin-top: 44px
+                & p 
+                    font-weight: 300
                 & span
                     font-size: 30px
                     @include respond (laptop)

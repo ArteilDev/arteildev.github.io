@@ -79,8 +79,11 @@
     &__item
         color: $color-black
     &-users
+        & img
+            width: 45px
+            height: 45px
         &__item:not(:first-child)
-            margin-left: -35px
+            margin-left: -30px
     &_wide
         @include respond (tab-port)
             display: none

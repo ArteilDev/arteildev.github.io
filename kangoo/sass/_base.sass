@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap')
 
 @font-face
     font-family: 'Bliss Pro'
@@ -169,8 +169,9 @@ button
     @include respond (phone-port)
         grid-template-columns: 1fr
     &-title
+        font-family: 'Bliss Pro'
         font-size: 40px
-        font-weight: 400
+        font-weight: 900
         text-align: center
         & span
             font-size: 30px
@@ -288,7 +289,7 @@ button
     background-color: $color-main
     & .container
         display: grid
-        grid-template-columns: auto 1fr 1fr 1fr
+        grid-template-columns: auto 1fr
         @include respond (laptop)
             justify-items: stretch
         @include respond (tab-port)
