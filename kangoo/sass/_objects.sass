@@ -136,7 +136,7 @@ option:hover
     height: 100vh
     background: rgba(134, 134, 134, 0.30)
     backdrop-filter: blur(4px)
-    -webkit-appearance: none
+    -webkit-backdrop-filter: blur(4px)
 
 .modal
     position: relative
@@ -189,10 +189,11 @@ option:hover
             gap: 24px
             color: #000
             white-space: nowrap
+            width: 100%
             @include respond (laptop)
                 font-size: 16px
             @include respond (phone-port)
-                gap: 16px
+                justify-content: space-between
                 font-size: 14px
             & span
                 color: $color-primary
