@@ -19,6 +19,10 @@
         @media only screen and (max-width: 1200px)
             @content
 
+    @if $breakpoint == laptop-xl
+        @media only screen and (max-width: 1280px)
+            @content
+
     @if $breakpoint == big-screen
         @media only screen and (min-width: 1400px)
             @content
