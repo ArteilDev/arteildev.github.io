@@ -22,6 +22,7 @@ select
     border: none
     outline: none
     @include respond (phone-port)
+        padding: 12px 12px
         font-size: 18px
     & option
         color: $color-black
@@ -294,10 +295,12 @@ option:hover
                     flex-direction: column
                     gap: 16px
                 & img
+                    @include respond (laptop-xl)
+                        width: 126px
                     @include respond (tab-port)
                         width: 64px
                 & span
-                    font-size: 36px
+                    font-size: 30px
                     font-weight: 400
                     @include respond (laptop)
                         font-size: 24px
@@ -316,13 +319,12 @@ option:hover
                 flex-direction: column
                 gap: 16px
                 margin-top: 24px
-                & p 
+                & p
+                    font-size: 18px
                     font-weight: 300
                 & span
-                    font-size: 30px
+                    font-size: 24px
                     font-weight: 400
-                    @include respond (laptop)
-                        font-size: 24px
                     @include respond (tab-port)
                         font-size: 20px
             
