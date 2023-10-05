@@ -154,8 +154,6 @@ button
             display: none
             @include respond (phone-port)
                 display: flex
-            & select
-                // padding: 8px 0
 
 .timetable-wrapper
     padding: 16px 0
@@ -170,6 +168,8 @@ button
     color: $color-white
     @include respond (laptop-xl)
         grid-column-gap: 18px
+    @include respond (laptop)
+        grid-template-columns: repeat(5, 1fr)
     @include respond (tab-port)
         grid-template-columns: repeat(3, 1fr)
     @include respond (phone-port)
@@ -268,7 +268,9 @@ button
                 @include respond (phone-sm)
                     font-size: 28px
 
-@media (min-width: 995px) and (max-width: 1400px)
+@media (min-width: 1200px) and (max-width: 1400px)
+    .timetable-item
+        padding: 0 12px
     .timetable-item__image
         min-width: 24px
 .howfind
