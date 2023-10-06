@@ -44,6 +44,60 @@
                 </div>
             </nav>
         </div>
+        <div class="nav-mobile">
+            <div class="nav-mobile-burger" onclick="mobileMenu()">
+                <div class="nav-mobile-burger__line nav-mobile-burger__line_1"></div>
+                <div class="nav-mobile-burger__line nav-mobile-burger__line_2"></div>
+                <div class="nav-mobile-burger__line nav-mobile-burger__line_3"></div>
+            </div>
+            <img src="img/Logo.svg" alt="Тубетей" class="nav-mobile-brand">
+        </div>
+        <div class="navbar-collapse">
+            <div class="navbar-collapse-header">
+                <img src="img/arrow.svg" alt="Закрыть меню" class="navbar-collapse__btn" onclick="mobileMenu()">
+    
+                <div class="nav-stories">
+                    <div class="nav-stories__item">
+                        <div class="nav-stories__item__img"
+                            style="background: url('https://arteildev.github.io/tubatay/img/1689160497037.png') no-repeat center; background-size: cover;">
+                        </div>
+                    </div>
+                    <div class="nav-stories__item nav-stories__item_active">
+                        <div class="nav-stories__item__img"
+                            style="background: url('https://arteildev.github.io/tubatay/img/1689159916782.png') no-repeat center; background-size: cover;">
+                        </div>
+                    </div>
+                    <div class="nav-stories__item nav-stories__item_active">
+                        <div class="nav-stories__item__img"
+                            style="background: url('https://arteildev.github.io/tubatay/img/1692777645108.png') no-repeat center; background-size: cover;">
+                        </div>
+                    </div>
+                    <div class="nav-stories__item nav-stories__item_active">
+                        <div class="nav-stories__item__img"
+                            style="background: url('https://arteildev.github.io/tubatay/img/1692778685991.png') no-repeat center; background-size: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-collapse-body">
+                <a href="#" class="navbar-collapse-body__item">Главный сайт
+                    <img src="img/nav_btn.svg" alt="Перейти">
+                </a>
+                <a href="#" class="navbar-collapse-body__item">Вакансии
+                    <img src="img/nav_btn.svg" alt="Перейти">
+                </a>
+                <a href="#" class="navbar-collapse-body__item">Оставить заявку
+                    <img src="img/nav_btn.svg" alt="Перейти">
+                </a>
+                <div class="navbar-collapse-body__item">
+                    Связаться с hr отделом
+                    <div class="d-flex">
+                        <button class="btn btn_lg btn_outline-primary">team@tubatay.com</button>
+                        <button class="btn btn_lg btn_primary">+7 956 764 57 68</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     <main class="main">
         <section class="section section-work container" >
@@ -341,7 +395,6 @@
 
     const mediaPhoneLand = window.matchMedia('(max-width: 991px) and (min-width: 768px)')
     if (mediaPhoneLand.matches) {
-        console.log("land");
         for( let i = 0; i < carousel.length; i++) {
             carousel[0].dataset.gap = '20'
             carousel[1].dataset.gap = '14'
@@ -350,10 +403,14 @@
 
     const mediaPhonePort = window.matchMedia('(max-width: 767px)')
     if (mediaPhonePort.matches) {
-        console.log("port");
         for( let i = 0; i < carousel.length; i++) {
             carousel[i].dataset.gap = '8'
         }
+    }
+
+    function mobileMenu() {
+        const navbar = document.querySelector(".navbar-collapse")
+        navbar.classList.toggle('active')
     }
     
     function sliderController(event) {

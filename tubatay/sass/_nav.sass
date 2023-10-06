@@ -2,6 +2,10 @@
     padding: 17px 0
     display: flex
     align-items: center
+    @include respond (phone-land)
+        display: none
+    @include respond (phone-port)
+        display: none
     &-brand
         margin-right: 50px
     &-navbar
@@ -39,3 +43,84 @@
                 height: calc( 100% - 6px )
                 border-radius: 500px
 
+.nav-mobile
+    position: fixed
+    padding: 15px 17px
+    display: none
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    background-color: #F8F8F8
+    z-index: 5
+    @include respond (phone-land)
+        display: flex
+    @include respond (phone-port)
+        display: flex
+    &-burger
+        display: flex
+        flex-direction: column
+        gap: 7px
+        width: 23px
+        &__line
+            height: 1px
+            background-color: $color-black
+            &_1
+                width: 23px
+            &_2
+                width: 11px
+            &_3
+                width: 19px
+    &-brand
+        width: 78px
+        height: 17px
+
+.navbar-collapse
+    position: fixed
+    top: 0
+    right: 0
+    display: none
+    flex-direction: column
+    width: 100%
+    height: 100%
+    transition: .5s ease
+    transform: translate(1500px)
+    z-index: 15
+    @include respond (phone-land)
+        display: flex
+    @include respond (phone-port)
+        display: flex
+    &.active
+        transform: translate(0)
+    &-header
+        padding: 9px 16px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        background-color: $color-bg
+    &__btn
+        height: 50%
+    &-body
+        padding: 17px
+        display: flex
+        flex-direction: column
+        gap: 7px
+        width: 100%
+        height: 100%
+        background-color: $color-white
+        &__item
+            display: flex
+            align-items: center
+            justify-content: space-between
+            padding: 2px 8px
+            font-size: 12px
+            font-weight: 700
+            line-height: 35px
+            color: $color-black
+            background-color: #F7F7F7
+            &:nth-last-child(1)
+                display: flex
+                flex-direction: column
+                align-items: stretch
+                & .d-flex
+                    gap: 8px
