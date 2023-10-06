@@ -1,0 +1,41 @@
+.nav
+    padding: 17px 0
+    display: flex
+    align-items: center
+    &-brand
+        margin-right: 50px
+    &-navbar
+        display: flex
+        gap: 27px
+        &__item
+            color: $color-black
+    &-stories
+        margin-left: auto
+        display: flex
+        &__item
+            position: relative
+            padding: 1px
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 46px
+            height: 46px
+            &:not(:first-child)
+                margin-left: -20px
+            &_active
+                &::before
+                    content: ""
+                    position: absolute
+                    inset: 0
+                    border-radius: 50px
+                    padding: 2px
+                    background: linear-gradient(120deg, rgba(214,108,86,1) 50%, rgba(214,108,86,.5) 100%)
+                    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)
+                    -webkit-mask-composite: xor
+                    mask-composite: exclude
+                    pointer-events: none
+            &__img
+                width: calc( 100% - 6px )
+                height: calc( 100% - 6px )
+                border-radius: 500px
+
