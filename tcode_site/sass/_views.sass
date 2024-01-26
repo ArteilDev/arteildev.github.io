@@ -1,0 +1,119 @@
+.cases-view
+    &-nav
+        padding-bottom: 8px
+        margin-bottom: 30px
+        display: flex
+        gap: 22px
+        white-space: nowrap
+        overflow-x: auto
+        @include respond(tablet)
+            margin-bottom: 18px
+        @include respond(mobile)
+            padding-bottom: 4px
+    &-tags
+        padding-bottom: 8px
+        margin-bottom: 91px
+        display: flex
+        gap: 40px
+        white-space: nowrap
+        overflow-x: auto
+        @include respond(tablet)
+            margin-bottom: 62px
+        @include respond(mobile)
+            padding-bottom: 4px
+            margin-bottom: 28px
+        &__item
+            @include respond(mobile)
+                font-size: 14px
+            &.active
+                color: $color-primary
+    &-wrapper
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-column-gap: 21px
+        grid-row-gap: 85px
+        @include respond(laptop)
+            grid-row-gap: 64px
+        @include respond(mobile)
+            grid-template-columns: 1fr
+            grid-row-gap: 28px
+    &-card
+        &__img
+            margin-bottom: 34px
+            width: 100%
+            @include respond(laptop)
+                margin-bottom: 18px
+            @include respond(tablet)
+                margin-bottom: 8px
+        &__title
+            font-size: 40px
+            font-weight: 400
+            line-height: 52px
+            @include respond(laptop)
+                font-size: 36px
+            @include respond(tablet)
+                font-size: 28px
+        &__subtitle
+            font-size: 20px
+            line-height: 24px
+            @include respond(laptop)
+                font-size: 16px
+
+.review-view
+    &-wrapper
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-column-gap: 26px
+        grid-row-gap: 42px
+        @include respond(tablet)
+            grid-column-gap: 12px
+            grid-row-gap: 28px
+        @include respond(mobile)
+            grid-template-columns: 1fr
+    &-card
+        padding: 35px 30px
+        font-size: 20px
+        background: $color-white
+        @include respond(laptop)
+            font-size: 16px
+        @include respond(tablet)
+            padding: 24px 19px
+        @include respond(mobile)
+            font-size: 14px
+        &__img
+            margin-bottom: 24px
+            height: 44px
+            @include respond(tablet)
+                height: 28px
+            & img
+                height: 100%
+        &__text
+            margin-bottom: 32px
+            @include respond(mobile)
+                margin-bottom: 18px
+        &__name
+            margin-bottom: 20px
+            @include respond(mobile)
+                margin-bottom: 14px
+        &__position
+            color: #B6B6B6
+
+.articles-view-wrapper
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-column-gap: 32px
+    grid-row-gap: 40px 
+    @include respond(mobile)
+        grid-template-columns: repeat(2, 1fr)
+        grid-column-gap: 8px
+        grid-row-gap: 16px
+    & .articles-item
+        padding: 20px 18px
+        align-items: flex-start
+        &__img
+            width: 40px
+            height: 40px
+            & svg
+                width: 65%
+        &__title
+            text-align: start
