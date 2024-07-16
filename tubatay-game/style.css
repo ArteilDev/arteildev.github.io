@@ -17,6 +17,10 @@ body.body_guide {
     background: #EDFFF2;
 }
 
+a {
+    text-decoration: none;
+}
+
 h1 {
     font-size: 20px;
     font-weight: 700;
