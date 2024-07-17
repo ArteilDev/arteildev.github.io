@@ -96,11 +96,13 @@
                     "https://arteildev.github.io/game/img/enemy-6.png"
                 ]
 
-                if(!enemy) {
-                    foodImg.src = foodimages[Math.floor(Math.random() * foodimages.length)]
-                } else {
-                    foodImg.src = enemyImages[Math.floor(Math.random() * enemyImages.length)]
-                }
+                // if(!enemy) {
+                //     foodImg.src = foodimages[Math.floor(Math.random() * foodimages.length)]
+                // } else {
+                //     foodImg.src = enemyImages[Math.floor(Math.random() * enemyImages.length)]
+                // }
+
+                foodImg.src = foodimages[Math.floor(Math.random() * foodimages.length)]
 
                 this.draw = function () {
                     c.beginPath();
