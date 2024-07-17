@@ -8,10 +8,17 @@
 </head>
 
 <body>
+    <button id="start">Start</button>
     <canvas id="canvas"></canvas>
 </body>
 <script>
-    window.onload = function () {
+    let start = false
+
+    document.getElementById('start').onclick = function() {
+       Game()
+    }
+
+    function Game() {
         let c = document.querySelector("canvas");
         let canvas = document.querySelector("canvas");
         c.width = innerWidth;
@@ -92,17 +99,14 @@
                     "https://arteildev.github.io/game/img/enemy-2.png",
                     "https://arteildev.github.io/game/img/enemy-3.png",
                     "https://arteildev.github.io/game/img/enemy-4.png",
-                    "https://arteildev.github.io/game/img/enemy-5.png",
-                    "https://arteildev.github.io/game/img/enemy-6.png"
+                    "https://arteildev.github.io/game/img/enemy-5.png"
                 ]
 
-                // if(!enemy) {
-                //     foodImg.src = foodimages[Math.floor(Math.random() * foodimages.length)]
-                // } else {
-                //     foodImg.src = enemyImages[Math.floor(Math.random() * enemyImages.length)]
-                // }
-
-                foodImg.src = foodimages[Math.floor(Math.random() * foodimages.length)]
+                if(!enemy) {
+                    foodImg.src = foodimages[Math.floor(Math.random() * foodimages.length)]
+                } else {
+                    foodImg.src = enemyImages[Math.floor(Math.random() * enemyImages.length)]
+                }
 
                 this.draw = function () {
                     c.beginPath();
