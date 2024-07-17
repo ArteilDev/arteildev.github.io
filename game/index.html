@@ -8,14 +8,17 @@
 </head>
 
 <body>
-    <button id="start">Start</button>
+    <!-- <button id="start">Start</button> -->
     <canvas id="canvas"></canvas>
 </body>
 <script>
-    let start = false
+    // let start = false
 
-    document.getElementById('start').onclick = function() {
-       Game()
+    // document.getElementById('start').onclick = function() {
+    //    Game()
+    // }
+    window.onload = function () {
+        Game()
     }
 
     function Game() {
@@ -52,7 +55,7 @@
             let player_height = 90;
             let playerImg = new Image();
             let score = 0;
-            playerImg.src = "https://arteildev.github.io/tubatay-game/img/player.svg";
+            playerImg.src = "https://arteildev.github.io/game/img/player.svg";
 
             let _foods = [];
             let food_width = 64;
@@ -122,7 +125,7 @@
             let __player = new Player(mouse.x, mouse.y, player_width, player_height);
 
             function drawFoods() {
-                for (let _ = 0; _ < 4; _++) {
+                for (let _ = 0; _ < 1; _++) {
                     let x = Math.random() * (innerWidth - food_width);
                     let y = -food_height;
                     let width = food_width;
@@ -165,6 +168,7 @@
                 for (let j = _foods.length - 1; j >= 0; j--) {
                     if (collision(_foods[j], __player)) {
                         _foods.splice(j, 1);
+                        console.log(_foods[j]);
                         if(!_foods[j].enemy) {
                             score++;
                         } else {
