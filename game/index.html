@@ -12,8 +12,8 @@
 </body>
 <script>
     window.onload = function () {
-        var c = document.querySelector("canvas");
-        var canvas = document.querySelector("canvas");
+        let c = document.querySelector("canvas");
+        let canvas = document.querySelector("canvas");
         c.width = innerWidth;
         c.height = innerHeight;
         c = c.getContext("2d");
@@ -33,37 +33,23 @@
             });
 
             canvas.addEventListener("touchmove", function (event) {
-                var rect = canvas.getBoundingClientRect();
-                var root = document.documentElement;
-                var touch = event.changedTouches[0];
-                var touchX = parseInt(touch.clientX);
+                let rect = canvas.getBoundingClientRect();
+                let root = document.documentElement;
+                let touch = event.changedTouches[0];
+                let touchX = parseInt(touch.clientX);
                 event.preventDefault();
                 mouse.x = touchX;
             });
 
-            var player_width = 160;
-            var player_height = 90;
-            var playerImg = new Image();
-            var score = 0;
-            var health = 100;
+            let player_width = 160;
+            let player_height = 90;
+            let playerImg = new Image();
+            let score = 0;
             playerImg.src = "https://arteildev.github.io/tubatay-game/img/player.svg";
 
-            var _bullets = [];
-            var bullet_width = 6;
-            var bullet_height = 8;
-            var bullet_speed = 10;
-
-            var _enemies = [];
-            var enemyImg = new Image();
-            enemyImg.src = "https://arteildev.github.io/tubatay-game/img/food-2.svg"
-            var enemy_width = 58;
-            var enemy_height = 58;
-
-            // var _healthkits = [];
-            // var healthkitImg = new Image();
-            // healthkitImg.src = "https://image.ibb.co/gFvSEU/first_aid_kit.png";
-            // var healthkit_width = 32;
-            // var healthkit_height = 32;
+            let _foods = [];
+            let food_width = 64;
+            let food_height = 64;
 
             function Player(x, y, width, height) {
                 this.x = x;
@@ -82,36 +68,43 @@
                 };
             }
 
-            // function Bullet(x, y, width, height, speed) {
-            //     this.x = x;
-            //     this.y = y;
-            //     this.width = width;
-            //     this.height = height;
-            //     this.speed = speed;
-
-            //     this.draw = function () {
-            //         c.beginPath();
-            //         c.rect(this.x, this.y, this.width, this.height);
-            //         c.fillStyle = "white";
-            //         c.fill();
-            //     };
-
-            //     this.update = function () {
-            //         this.y -= this.speed;
-            //         this.draw();
-            //     };
-            // }
-
-            function Enemy(x, y, width, height, speed) {
+            function Food(x, y, width, height, speed, enemy) {
                 this.x = x;
                 this.y = y;
                 this.width = width;
                 this.height = height;
                 this.speed = speed;
+                this.enemy = enemy
+
+                let foodImg = new Image();
+
+                let foodimages = [
+                    "https://arteildev.github.io/game/img/food-1.png",
+                    "https://arteildev.github.io/game/img/food-2.png",
+                    "https://arteildev.github.io/game/img/food-3.png",
+                    "https://arteildev.github.io/game/img/food-4.png",
+                    "https://arteildev.github.io/game/img/food-5.png",
+                    "https://arteildev.github.io/game/img/food-6.png"
+                ]
+
+                let enemyImages = [
+                    "https://arteildev.github.io/game/img/enemy-1.png",
+                    "https://arteildev.github.io/game/img/enemy-2.png",
+                    "https://arteildev.github.io/game/img/enemy-3.png",
+                    "https://arteildev.github.io/game/img/enemy-4.png",
+                    "https://arteildev.github.io/game/img/enemy-5.png",
+                    "https://arteildev.github.io/game/img/enemy-6.png"
+                ]
+
+                if(!enemy) {
+                    foodImg.src = foodimages[Math.floor(Math.random() * foodimages.length)]
+                } else {
+                    foodImg.src = enemyImages[Math.floor(Math.random() * enemyImages.length)]
+                }
 
                 this.draw = function () {
                     c.beginPath();
-                    c.drawImage(enemyImg, this.x, this.y);
+                    c.drawImage(foodImg, this.x, this.y);
                 };
 
                 this.update = function () {
@@ -120,61 +113,21 @@
                 };
             }
 
-            // function Healthkit(x, y, width, height, speed) {
-            //     this.x = x;
-            //     this.y = y;
-            //     this.width = width;
-            //     this.height = height;
-            //     this.speed = speed;
+            let __player = new Player(mouse.x, mouse.y, player_width, player_height);
 
-            //     this.draw = function () {
-            //         c.beginPath();
-            //         c.drawImage(healthkitImg, this.x, this.y);
-            //     };
+            function drawFoods() {
+                for (let _ = 0; _ < 4; _++) {
+                    let x = Math.random() * (innerWidth - food_width);
+                    let y = -food_height;
+                    let width = food_width;
+                    let height = food_height;
+                    let speed = Math.random() * 5;
+                    let enemy = Math.random() < .5;
 
-            //     this.update = function () {
-            //         this.y += this.speed;
-            //         this.draw();
-            //     };
-            // }
-
-            var __player = new Player(mouse.x, mouse.y, player_width, player_height);
-
-            function drawEnemies() {
-                for (var _ = 0; _ < 4; _++) {
-                    var x = Math.random() * (innerWidth - enemy_width);
-                    var y = -enemy_height;
-                    var width = enemy_width;
-                    var height = enemy_height;
-                    var speed = Math.random() * 2;
-                    var __enemy = new Enemy(x, y, width, height, speed);
-                    _enemies.push(__enemy);
+                    let __food = new Food(x, y, width, height, speed, enemy);
+                    _foods.push(__food);
                 }
-            } setInterval(drawEnemies, 1234);
-
-            // function drawHealthkits() {
-            //     for (var _ = 0; _ < 1; _++) {
-            //         var x = Math.random() * (innerWidth - enemy_width);
-            //         var y = -enemy_height;
-            //         var width = healthkit_width;
-            //         var height = healthkit_height;
-            //         var speed = Math.random() * 2.6;
-            //         var __healthkit = new Healthkit(x, y, width, height, speed);
-            //         _healthkits.push(__healthkit);
-            //     }
-            // } setInterval(drawHealthkits, 15000);
-
-            // function fire() {
-            //     for (var _ = 0; _ < 1; _++) {
-            //         var x = mouse.x - bullet_width / 2;
-            //         var y = mouse.y - player_height;
-            //         var __bullet = new Bullet(x, y, bullet_width, bullet_height, bullet_speed);
-            //         _bullets.push(__bullet);
-            //     }
-            // } setInterval(fire, 200);
-
-            canvas.addEventListener("click", function () {
-            });
+            } setInterval(drawFoods, 1000);
 
             function collision(a, b) {
                 return a.x < b.x + b.width &&
@@ -195,49 +148,24 @@
                 c.beginPath();
                 c.clearRect(0, 0, innerWidth, innerHeight);
                 c.fillStyle = 'black';
-                // c.fillText("Health: " + health, 5, 20);
                 c.fillText("Score: " + score, innerWidth - 100, 20);
 
                 __player.update();
 
-                for (var i = 0; i < _bullets.length; i++) {
-                    _bullets[i].update();
-                    if (_bullets[i].y < 0) {
-                        _bullets.splice(i, 1);
+                for (let k = 0; k < _foods.length; k++) {
+                    _foods[k].update();
+                }
+
+                for (let j = _foods.length - 1; j >= 0; j--) {
+                    if (collision(_foods[j], __player)) {
+                        _foods.splice(j, 1);
+                        if(!_foods[j].enemy) {
+                            score++;
+                        } else {
+                            score--;
+                        }
                     }
                 }
-
-                for (var k = 0; k < _enemies.length; k++) {
-                    _enemies[k].update();
-                    // if (_enemies[k].y > innerHeight) {
-                    //     _enemies.splice(k, 1);
-                    //     health -= 10;
-                    //     if (health == 0) {
-                    //         alert("You DIED!\nYour score was " + score);
-                    //         startGame();
-                    //     }
-                    // }
-                }
-
-                for (var j = _enemies.length - 1; j >= 0; j--) {
-                    if (collision(_enemies[j], __player)) {
-                        _enemies.splice(j, 1);
-                        score++;
-                    }
-                }
-
-                // for (var h = 0; h < _healthkits.length; h++) {
-                //     _healthkits[h].update();
-                // }
-                // for (var hh = _healthkits.length - 1; hh >= 0; hh--) {
-                //     for (var hhh = _bullets.length - 1; hhh >= 0; hhh--) {
-                //         if (collision(_healthkits[hh], _bullets[hhh])) {
-                //             _healthkits.splice(hh, 1);
-                //             _bullets.splice(hhh, 1);
-                //             health += 10;
-                //         }
-                //     }
-                // }
 
             }
             animate();
